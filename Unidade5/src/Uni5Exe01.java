@@ -12,7 +12,7 @@ public class Uni5Exe01 {
             if(numero % 2 == 0 ){
                 System.out.println("O número é PAR");
             }else{
-                System.out.println("O número é IMAPR");
+                System.out.println("O número é IMPAR");
             }
         }
      teclado.close();   
