@@ -8,7 +8,6 @@ public class Uni5Exe09 {
         int nAlunos = teclado.nextInt();
         int idade = 0;
         String dz8a = "";
-        int vinteA = 0;
         String nome = "";
         int contador = 0;
         // Processos
@@ -25,7 +24,7 @@ public class Uni5Exe09 {
             }
         }
         System.out.println("Lista de alunos com 18 anos: " + dz8a);
-        System.out.println("Quantidade de alunos acima de 20 anos " + contador);
+        System.out.println("Quantidade de alunos acima de 20 anos: " + contador);
         teclado.close();
     }
 

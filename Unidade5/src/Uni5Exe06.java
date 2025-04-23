@@ -12,7 +12,7 @@ public class Uni5Exe06 {
             somaAltura += altura;
             qtdPessoas++;
         }
-        System.out.println("Média Alturas: " + somaAltura / qtdPessoas);
+        System.out.println("A média de altura é: " + somaAltura / qtdPessoas);
 
         teclado.close();
     }

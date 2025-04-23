@@ -4,7 +4,7 @@ public class Uni5Exe08 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         // Entradas
-        System.out.println("Quantas vezes os o processo se repetirá:");
+        System.out.println("n =");
         int nVezes = teclado.nextInt();
         double menorN = Double.MAX_VALUE;
         double m = 0;
