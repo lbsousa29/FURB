@@ -14,7 +14,7 @@ public class Uni5Exe14 {
         String lucroM20 = "";
         // Processos
         for (int i = 1; i <= n; i++) {
-            System.out.println("Incira o nome do produto: ");
+            System.out.println("Insira o nome do produto: ");
             nomeM = teclado.next();
             System.out.println("Qual o valor de compra do produto? ");
             precoDeCompra = teclado.nextDouble();

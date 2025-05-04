@@ -7,17 +7,17 @@ public class Uni5Exe19 {
         double valorComp = 1;
         double valorTotal = 0;
 
-        while (valorComp != 0){
+        while (valorComp != 0) {
             System.out.println("Insira valor da compra: ");
             valorComp = teclado.nextDouble();
 
-            if (valorComp > 500){
+            if (valorComp > 500) {
                 valorComp = valorComp * 0.8;
-                valorTotal += valorComp;
+                valorTotal = valorComp;
                 System.out.printf("O valor a pagar é: R$%.2f\n", valorComp);
             }
 
-            if (valorComp <= 500 && valorComp != 0){
+            if (valorComp <= 500 && valorComp != 0) {
                 valorComp = valorComp * 0.85;
                 valorTotal += valorComp;
                 System.out.printf("O valor a pagar é: R$%.2f\n", valorComp);
