@@ -11,8 +11,7 @@ public class ExemploFuncao {
         System.out.println("Soma é: " + valor);
         // Método de saber qual jogador está na vez
         System.out.println("Jogador" + exemplo.jogadorDaVez(5));
-        
-       
+
     }
 
     private double somarDecimal(double valor1, double valor2) {
@@ -31,5 +30,4 @@ public class ExemploFuncao {
         }
     }
 
-    
 }
