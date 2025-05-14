@@ -16,7 +16,7 @@ public class Uni6Exe10B {
             System.out.println("4- Excluir valor");
             System.out.println("5- Mostrar valores");
             System.out.println("6- Ordenar valores");
-            System.out.println("7- Inserir valores");
+            System.out.println("7- Inverter valores");
             System.out.println("8- Sair do sistema");
             opcao = teclado.nextInt();
             System.out.println("Opção Digitada " + opcao);
@@ -29,7 +29,9 @@ public class Uni6Exe10B {
 
                     break;
                 case 3:
-
+                    
+                    
+                    alterar( vet, posicao, teclado);
                     break;
                 case 4:
 
@@ -41,10 +43,10 @@ public class Uni6Exe10B {
 
                     break;
                 case 7:
-
+                    inverter(vet);
                     break;
                 case 8:
-
+                    System.out.println("FIM");
                     break;
 
                 default:
@@ -55,15 +57,24 @@ public class Uni6Exe10B {
 
     }
 
-    private void pesquisarValor(int[] vet, Scanner teclado) {
+    private void inverter(int[] vet /*posição final no vetor */) {
+        int temp = 0;
+        for(int i = 0;   /* i menor que a posição final;/* */; i++);
+    }
+
+    private  void alterar( int[] vet, int posicao, Scanner teclado) {
+            int indice = pesquisarValor(vet, teclado);
+    }
+    private int pesquisarValor(int[] vet, Scanner teclado) {
         int numeroDigitado = teclado.nextInt();
         for (int i = 0; i < vet.length; i++) {
             if (vet[i] == numeroDigitado) {
                 System.out.println("Valor " + numeroDigitado + " encontrado na posição vet[" + i + "]");
-                return;
+                return i;
             }
         }
-        System.out.println("Número não encontrado");
+        return -1;
+
     }
 
     private int incluirValor(int[] vet, int posicao, Scanner teclado) {
