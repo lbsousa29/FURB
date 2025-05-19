@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class Uni6Exe05 {
     public static String[] ler(Scanner scanner){
-        String[] vetor_perguntas = {"Gosta de música sertaneja?", "Gosta de futebol?", "Gosta de seriados?", "Gosta de redes sociais?", "Gosta da Oktoberfest?"};
+        String[] vetorPerguntas = {"Gosta de música sertaneja?", "Gosta de futebol?", "Gosta de seriados?", "Gosta de redes sociais?", "Gosta da Oktoberfest?"};
         String[] vetor = new String[5];
 
         for (int i = 0;i < 5;i++){
-            System.out.print(vetor_perguntas[i] + " [SIM/NAO/IND]: ");
+            System.out.print(vetorPerguntas[i] + " [SIM/NAO/IND]: ");
             vetor[i] = scanner.next();
         }
 
         return vetor;
     }
 
-    public static int calcular_afinidade(String[] vetor_rapaz, String[] vetor_moca){
+    public static int calcular_afinidade(String[] vetorRapaz, String[] vetorMoca){
         int afinidade = 0;
 
         for (int i = 0;i < 5;i++){
-            if (vetor_rapaz[i].equals(vetor_moca[i])){
+            if (vetorRapaz[i].equals(vetorMoca[i])){
                 afinidade += 3;
-            }else if (vetor_moca[i].equals("IND") || vetor_rapaz[i].equals("IND")){
+            }else if (vetorMoca[i].equals("IND") || vetorRapaz[i].equals("IND")){
                 afinidade += 1;
             }else{
                 afinidade -= 2;
@@ -31,11 +31,11 @@ public class Uni6Exe05 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("----------RAPAZ----------");
-        String[] vetor_rapaz = ler(scanner);
-        System.out.println("----------MOÇA----------");
-        String[] vetor_moca = ler(scanner);
-        int afinidade = calcular_afinidade(vetor_rapaz, vetor_moca);
+        System.out.println("--RAPAZ--");
+        String[] vetorRapaz = ler(scanner);
+        System.out.println("--MOÇA--");
+        String[] vetorMoca = ler(scanner);
+        int afinidade = calcular_afinidade(vetorRapaz, vetorMoca);
 
         if (afinidade == -10){
             System.out.println("Vocês se odeiam!");

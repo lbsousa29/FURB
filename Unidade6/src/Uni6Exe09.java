@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Uni6Exe09 {
     public static void ler(Scanner scanner){
-        int soma = 0, soma_homens = 0, qtd_homens = 0, nota_mulher_jovem = 0, mulher_jovem = 0, qtd_mulher_50 = 0;
-        int[] notas_mulher_50 = new int[30];
-        boolean primeira_mulher = true;
+        int soma = 0, somaHomens = 0, qtdHomens = 0, notaMulherJovem = 0, mulherJovem = 0, qtdMulher50 = 0;
+        int[] notasMulher50 = new int[30];
+        boolean primeiraMulher = true;
 
         for (int i = 0;i < 30;i++){
             System.out.print("Sexo: ");
@@ -17,35 +17,35 @@ public class Uni6Exe09 {
             soma += nota;
 
             if (sexo == 2){
-                soma_homens += nota;
-                qtd_homens++;
+                somaHomens += nota;
+                qtdHomens++;
             }else{
-                if (primeira_mulher){
-                    nota_mulher_jovem = nota;
-                    mulher_jovem = idade;
-                    primeira_mulher = false;
+                if (primeiraMulher){
+                    notaMulherJovem = nota;
+                    mulherJovem = idade;
+                    primeiraMulher = false;
                 }
 
-                if (idade < mulher_jovem){
-                    mulher_jovem = idade;
-                    nota_mulher_jovem = nota;
+                if (idade < mulherJovem){
+                    mulherJovem = idade;
+                    notaMulherJovem = nota;
                 }
 
                 if (idade >= 50){
-                    notas_mulher_50[qtd_mulher_50] = nota;
-                    qtd_mulher_50++;
+                    notasMulher50[qtdMulher50] = nota;
+                    qtdMulher50++;
                 }
             }
 
         }
         
         float media = soma / 30.0f;
-        float media_homem = soma_homens / qtd_homens;
+        float mediaHomem = somaHomens / qtdHomens;
         System.out.println("Media: " + media);
-        System.out.println("Media masculina: " + media_homem);
-        System.out.println("Nota mulher mais jovem: " + nota_mulher_jovem);
+        System.out.println("Media masculina: " + mediaHomem);
+        System.out.println("Nota mulher mais jovem: " + notaMulherJovem);
 
-        mulher_50_acima_media(notas_mulher_50, qtd_mulher_50, media);
+        mulher_50_acima_media(notasMulher50, qtdMulher50, media);
     }
 
     public static void mulher_50_acima_media(int[] vetor, int qtd, float media){
@@ -56,7 +56,7 @@ public class Uni6Exe09 {
             }
         }
 
-        System.out.println("Qtd mulheres 50+ anos com nota acima media: " + cont);
+        System.out.println("Quantidade de mulheres 50+ anos com nota acima media: " + cont);
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

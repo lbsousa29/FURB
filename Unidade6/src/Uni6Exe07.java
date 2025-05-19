@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Uni6Exe07 {
     public static int[] ler(Scanner scanner){
-        int qtd_add = 0;
+        int qtdAdd = 0;
         int n = scanner.nextInt();
         while (n > 20){
             System.out.println("Tamanho do vetor deve ser <= 20");
@@ -17,7 +17,7 @@ public class Uni6Exe07 {
             while (!preenchido){
                 boolean existe = false;
                 int valor = scanner.nextInt();
-                for (int j = 0;j < qtd_add;j++){
+                for (int j = 0;j < qtdAdd;j++){
                     if (valor == vetor[j]){
                         existe = true;
                         break;

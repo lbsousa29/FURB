@@ -21,7 +21,7 @@ public class Uni6Exe04 {
     }
 
     private void lerVetor(int vetor[], Scanner tec, String nomeVetor){
-        System.out.println("****** Lendo o "+nomeVetor+ " ******");
+        System.out.println("Lendo o "+nomeVetor);
         for(int i = 0; i < vetor.length;i++){
             System.out.print(nomeVetor+"["+i+"]: ");
             vetor[i] = tec.nextInt();
@@ -35,7 +35,7 @@ public class Uni6Exe04 {
     }
 
     private void imprimirVetor(int vetor[], String nomeVetor){
-        System.out.println("***** IMPRIMINDO "+nomeVetor+" ******");
+        System.out.println("IMPRIMINDO "+nomeVetor);
         for (int i = 0; i < vetor.length; i++){
             System.out.println(nomeVetor+"["+i+"]: "+vetor[i]);
         }

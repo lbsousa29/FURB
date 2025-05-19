@@ -9,33 +9,33 @@ public class Uni6Exe08 {
             n = scanner.nextInt();
         }
 
-        int qtd_dif = 0;
-        float[] vetor_original = new float[n];
-        float[] vetor_diferentes = new float[n];
-        int[] vetor_qtd = new int[n];
+        int qtdDif = 0;
+        float[] vetorOriginal = new float[n];
+        float[] vetorDiferentes = new float[n];
+        int[] vetorQtd = new int[n];
 
         for (int i = 0;i < n;i++){
             float valor = scanner.nextFloat();
-            vetor_original[i] = valor;
+            vetorOriginal[i] = valor;
             boolean existe = false;
-            for (int j = 0;j < qtd_dif;j++){
-                if (vetor_original[i] == vetor_diferentes[j]){
-                    vetor_qtd[j]++;
+            for (int j = 0;j < qtdDif;j++){
+                if (vetorOriginal[i] == vetorDiferentes[j]){
+                    vetorQtd[j]++;
                     existe = true;
                     break;
                 }
             }
             if (!existe){
-                vetor_diferentes[qtd_dif] = valor;
-                vetor_qtd[qtd_dif] = 1;
-                qtd_dif++;
+                vetorDiferentes[qtdDif] = valor;
+                vetorQtd[qtdDif] = 1;
+                qtdDif++;
             }
         }
 
-        System.out.println("VALOR | FREQUENCIA");
+        System.out.println("VALOR | FREQUÊNCIA");
 
-        for (int i = 0;i < qtd_dif;i++){
-            System.out.printf("  %.2f|           %d\n", vetor_diferentes[i], vetor_qtd[i]);
+        for (int i = 0;i < qtdDif;i++){
+            System.out.printf("  %.2f|           %d\n", vetorDiferentes[i], vetorQtd[i]);
         }
 
         scanner.close();

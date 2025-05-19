@@ -30,7 +30,7 @@ public class Uni6Exe06 {
         if (retorno){
             System.out.println("Valor encontrado");
         }else{
-            System.out.println("Valor nao encontrado");
+            System.out.println("Valor não encontrado");
         }
 
         scanner.close();

@@ -20,10 +20,10 @@ public class Uni6Exe10 {
         return -1;
     }
 
-    public static void alterar(int valor_atual, int valor_novo, int[] vetor, int cont){
-        int index = pesquisar(valor_atual, vetor, cont);
+    public static void alterar(int valorAtual, int valorNovo, int[] vetor, int cont){
+        int index = pesquisar(valorAtual, vetor, cont);
         if (index >= 0){
-            inserir(valor_novo, vetor, index);
+            inserir(valorNovo, vetor, index);
         }else{
             System.out.println("numero nao encontrado");
         }
@@ -36,7 +36,7 @@ public class Uni6Exe10 {
                 vetor[i] = vetor[i + 1];
             } 
         }else{
-            System.out.println("numero nao encontrado");
+            System.out.println("Número não encontrado");
         }
     }
     public static void listar(int[] vetor, int cont){
@@ -105,10 +105,10 @@ public class Uni6Exe10 {
 
                 case 3:
                     System.out.print("Valor atual: ");
-                    int valor_atual = scanner.nextInt();
+                    int valorAtual = scanner.nextInt();
                     System.out.print("Valor novo: ");
-                    int valor_novo = scanner.nextInt();
-                    alterar(valor_atual, valor_novo, vetor, cont);
+                    int valorNovo = scanner.nextInt();
+                    alterar(valorAtual, valorNovo, vetor, cont);
                     break;    
 
                 case 4:
