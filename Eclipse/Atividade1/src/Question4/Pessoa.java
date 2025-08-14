@@ -10,14 +10,8 @@ public class Pessoa {
 		
 		
 		
-		
 		return imc;
 	}
-		 public Pessoa(String nome, double altura, double peso) {
-		        this.nome = nome;
-		        this.altura = altura;
-		        this.peso = peso;
 		
-	}
 	
 }

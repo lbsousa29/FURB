@@ -7,27 +7,38 @@ import Question3.Pessoa;
 
 public class App {
 	public static void main(String[] args) {
-		DecimalFormat df = new DecimalFormat("0.00");
-		Scanner read = new Scanner(System.in);
-		Pessoa[] pessoas = new Pessoa[3] ;
-		for (int i = 1; i <pessoas.length; i++) {
-			
-		
-		System.out.printf("Pessoa %d seu Nome:", i);
-		String nome = read.next();
-		Pessoa p = new Pessoa();
-		System.out.printf("Pessoa %d sua altura:", i);
-		double altura = read.nextDouble();
-		System.out.printf("Pessoa %d seu peso:", i);
-		double peso = read.nextDouble();
-		double imc = p.calcularImc();
-		System.out.println("Seu IMC calculado é: " + df.format(imc) );
-		
-			
-			pessoas[i] = new Pessoa(nome, altura, peso);
-			
-		
+		Pessoa[] pessoas = new Pessoa[3];
+		for (int i = 0; i < pessoas.length; i++) {
+			pessoas[i] = LerPessoa();
 		}
-		read.close();
+		Pessoa p = null;
+		for (int i = 0; i < pessoas.length; i++) {
+			DecimalFormat df = new DecimalFormat("0.00");
+			p.calcularImc();
+			p = pessoas[i];
+			System.out.println("Seu IMC calculado é: " + df.format(p.calcularImc()) );
+
+
+		}
+		}
+		
+	
+	public static Pessoa LerPessoa() {
+		double peso, altura;
+		Pessoa p =  new Pessoa();
+		Scanner read = new Scanner(System.in);
+System.out.printf("Seu Nome:");
+p.nome = read.nextLine();
+		System.out.printf("sua altura:" );
+		altura = read.nextDouble();
+		System.out.printf("Seu peso:");
+		peso = read.nextDouble();
+		p.calcularImc();
+		p.altura = altura;
+		p.peso = peso;
+		
+		
+		
+		return p;
 	}
 }
