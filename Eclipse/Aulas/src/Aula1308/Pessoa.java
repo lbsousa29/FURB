@@ -19,7 +19,7 @@ public class Pessoa {
 	}
 	public double getPeso() {
 		if (peso <= 0) {
-			throw new IllegalArgumentException("SAldo insuficiente");
+			throw new IllegalArgumentException("Saldo insuficiente");
 		}
 		
 		return peso;

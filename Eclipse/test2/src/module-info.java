@@ -1,3 +1,0 @@
-module test2 {
-	
-}

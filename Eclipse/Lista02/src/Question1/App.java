@@ -1,9 +1,8 @@
-package Question4;
+package Question1;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-import Question3.Pessoa;
 
 public class App {
 	public static void main(String[] args) {
@@ -17,28 +16,31 @@ public class App {
 		for (int i = pessoas.length - 1; i >=0 ; i--) {
 			DecimalFormat df = new DecimalFormat("0.00");
 			p = pessoas[i];
-			System.out.println(p.nome +"|"+" Altura: "+ p.altura+"|"+" Peso: "+ p.peso+"|"+ " IMC: " + df.format(p.calcularImc()) );
-
+			System.out.println(p.getNome() +"|"+" Altura: "+ p.getAltura()+"|"+" Peso: "+ p.getPeso()+"|"+ " IMC: " + df.format(p.calcularImc()) );
+			
 
 		}
+		
 		}
 		
 	
 	public static Pessoa LerPessoa() {
-		double peso, altura;
+		
 		Pessoa p =  new Pessoa();
 		Scanner read = new Scanner(System.in);
 System.out.printf("Seu Nome:");
-p.nome = read.nextLine();
-		System.out.printf("sua altura:" );
-		altura = read.nextDouble();
+p.setNome(read.next());
+		System.out.printf("Sua altura:" );
+		p.setAltura(read.nextDouble());
 		System.out.printf("Seu peso:");
-		peso = read.nextDouble();
-		p.altura = altura;
-		p.peso = peso;
+		p.setPeso(read.nextDouble()); 
 		
 		
 		
-		return p;
+		
+		
+			return p;
+		}
 	}
-}
+	
+
