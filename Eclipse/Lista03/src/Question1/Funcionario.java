@@ -3,6 +3,14 @@ package Question1;
 public class Funcionario {
 	private String nome;
 	private double salario;
+	
+	public Funcionario(String nome, double salario) {
+		this.nome = nome;
+		this.salario = salario;
+	}
+	
+	
+
 	public String getNome() {
 		return nome;
 	}
@@ -22,6 +30,18 @@ public class Funcionario {
 		}else if (salario <= 2826.65) {
 			salario = salario - 1903.98;
 			salario= salario   * 0.075;
+			
+		}else if (salario <= 3751.05) {
+			salario = salario - 2826.65;
+			salario= salario   * 0.15;
+			
+		}else if (salario <= 4664.68) {
+			salario = salario - 3751.05;
+			salario= salario   * 0.225;
+			
+		}else if (salario >= 4664.68) {
+			salario = salario - 4664.68;
+			salario= salario   * 0.275;
 			
 		}
 		
