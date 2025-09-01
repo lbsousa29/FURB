@@ -11,6 +11,11 @@ public class Funcionario {
 	
 	
 
+	public Funcionario() {
+	}
+
+
+
 	public String getNome() {
 		return nome;
 	}
@@ -23,7 +28,7 @@ public class Funcionario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-	public double calcularIrpf(double salario) {
+	public double calcularIrpf() {
 		
 		if (salario <= 1903.98) {
 		
@@ -48,5 +53,6 @@ public class Funcionario {
 		
 		return salario;
 	}
+	
 	
 }
