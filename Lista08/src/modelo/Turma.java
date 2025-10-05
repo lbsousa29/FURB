@@ -4,10 +4,14 @@ import java.util.ArrayList;
 
 public class Turma {
     private String nomeDisciplina;
+    private String turno;
+    private Professor professor;
     private ArrayList<Aluno> alunos;
 
-    public Turma(String nomeDisciplina) {
+    public Turma(String nomeDisciplina, String turno, Professor professor) {
         this.nomeDisciplina = nomeDisciplina;
+        this.turno = turno;
+        this.professor = professor;
         this.alunos = new ArrayList<>();
     }
 
@@ -34,8 +38,23 @@ public class Turma {
         return melhor;
     }
 
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
     @Override
     public String toString() {
-        return "Turma: " + nomeDisciplina + " | Quantidade de alunos: " + alunos.size();
+        return "Turma: " + nomeDisciplina +
+               " | Turno: " + turno +
+               " | Professor: " + professor.getNome() +
+               " | Total de alunos: " + alunos.size();
     }
 }

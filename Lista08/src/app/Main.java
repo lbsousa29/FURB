@@ -1,21 +1,18 @@
 package app;
 
 import modelo.Aluno;
+import modelo.Professor;
 import modelo.Turma;
 
 public class Main {
     public static void main(String[] args) {
-        Turma turmaPOO = new Turma("Programação Orientada a Objetos");
+        Professor prof = new Professor("Robson Walter de Souza", "Mestre em Computação");
+        Turma turmaPOO = new Turma("Programação Orientada a Objetos", "Noturno", prof);
 
-        Aluno a1 = new Aluno("Lucas", 745.0);
-        Aluno a2 = new Aluno("Maria", 820.5);
-        Aluno a3 = new Aluno("João", 820.5);
-        Aluno a4 = new Aluno("Pedro", 610.0);
-
-        turmaPOO.incluirAluno(a1);
-        turmaPOO.incluirAluno(a2);
-        turmaPOO.incluirAluno(a3);
-        turmaPOO.incluirAluno(a4);
+        turmaPOO.incluirAluno(new Aluno("Lucas", 745.0));
+        turmaPOO.incluirAluno(new Aluno("Maria", 820.5));
+        turmaPOO.incluirAluno(new Aluno("João", 820.5));
+        turmaPOO.incluirAluno(new Aluno("Pedro", 610.0));
 
         System.out.println(turmaPOO);
         System.out.println("\nLista de alunos:");
